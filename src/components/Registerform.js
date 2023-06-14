@@ -70,8 +70,8 @@ function SignupForm() {
 
   return (
         <div className='App'>
-            <h4>REGISTRATION FORM</h4>
-            <div>
+            <h4 ClassName="Heading">REGISTRATION FORM</h4>
+            <div className="App-header"> 
                 <form onSubmit={handleValidation}>
                     <label for="name" className="label"><strong>Name:</strong></label>
                     <input type="text" placeholder="Enter Name" value={name}
@@ -81,7 +81,7 @@ function SignupForm() {
                             }} className='inputform' />
                     {errors.name && <p style={{color: "red"}}>{errors.name}</p>}
 
-                    <br/><label for="dob" className="label"><strong>DOB:</strong></label>
+                    <br/><br/><label for="dob" className="label"><strong>DOB:</strong></label>
                     <input type="date" placeholder="Enter DOB"  value={dob}
                     name="dob" onChange={(event) =>
                         {
@@ -89,7 +89,7 @@ function SignupForm() {
                         }} className='inputform'/>
                     {errors.dob && <p style={{color: "red"}}>{errors.dob}</p>}
 
-                    <br/><label for="classn" className="label"><strong>Class:</strong></label>
+                    <br/><br/><label for="classn" className="label"><strong>Class:</strong></label>
                     <select type="text" className="selection" placeholder="Enter Class" value={classn}
                     name="classn" onChange={(event) =>
                         {
@@ -110,7 +110,7 @@ function SignupForm() {
                                     <option>X12</option>
                                 </select>{errors.classn && <p style={{color: "red"}}>{errors.classn}</p>}
 
-                    <br/><label for="division" className="label"><strong>Division:</strong></label>
+                    <br/><br/><label for="division" className="label"><strong>Division:</strong></label>
                     <select type="text" className="selection" placeholder="Enter Division" value={division}
                     name="division" onChange={(event) =>
                         {
@@ -122,7 +122,7 @@ function SignupForm() {
                                     <option>C</option>
                                 </select>{errors.division && <p style={{color: "red"}}>{errors.division}</p>}
 
-                    <br/><label for="gender" className="label"><strong>Gender:</strong></label>
+                    <br/><br/><label for="gender" className="label"><strong>Gender:</strong></label>
                     <input className="radioinput" type="radio" id="gender" value="male"
                     name="gender" onChange={(event) =>
                         {
